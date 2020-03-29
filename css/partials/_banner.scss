@@ -2,7 +2,7 @@
   /*height: 80vh;*/
   background-color: $color-blue;
   display: flex;
-  flex-wrap: wrap;
+  @include flexbox;
   align-items: center;
   justify-content: center;
   padding: 75px 20px 50px;
@@ -11,7 +11,6 @@
     content:  "";
     width: 100%;
     height: 100px;
-    background: $color-white;
     z-index: -1;
     bottom: -50px;
     background-color: $color-blue;
@@ -25,26 +24,22 @@
     width: 100%;
     position: relative;
   }
-
   h1 {
     color: $color-white;
     text-align: center;
     width: 100%;
     font-size: 25px;
     padding: 0;
-
     br {
       display: none;
     }
   }
-
   .secondary {
     color: $color-white;
     width: 100%;
     font-size: 14px;
     text-align: center;
   }
-
   .cta-wrap {
     display: block;
     align-items: center;
@@ -65,7 +60,6 @@
       }
     }
   }
-
   .try-activities {
     display: block;
     align-items: center;
@@ -78,30 +72,48 @@
       font-size: 14px;
     }
     ul {
-      display: flex;
+      @include flexbox;
       justify-content: space-around;
       list-style: none;
       padding: 2px;
-      margin: 0;
-      &.page-list {
+      margin: auto;
+      width: max-content;
+      margin-top: 5px;
+      &.page-list, &.slick-dots {
         border-radius: 20px;
         border: 1px solid $color-white;
+        order: 1;
+      }
+      .slick-active {
+        button {
+          border-radius: 100%;
+          border: 1px solid $color-yellow;
+          background-color: $color-yellow;
+          color: $color-blue;
+          width: 26px;
+          height: 26px;
+          display: flex;
+        }
       }
       li {
-        a {
-          width: 34px;
-          height: 34px;
-          display: flex;
+        a, button {
+          width: 26px;
+          height: 26px;
+          padding: 0;
+          @include flexbox;
           justify-content: center;
           align-items: center;
-          font-weight: 600;
+          font-weight: bold;
+          border: 0;
+          background: none;
+          color: $color-white;
+          cursor: pointer;
+          outline: none;
           &:hover {
             border-radius: 100%;
             border: 1px solid $color-yellow;
             background-color: $color-yellow;
             color: $color-blue;
-            width: 34px;
-            height: 34px;
             display: flex;
           }
         }
@@ -123,20 +135,17 @@
     .banner-bg {
       background: url(../images/Group5.png) left 60% no-repeat, url(../images/Group13.png) right 60% no-repeat;
     }
-
     h1 {
       font-size: 50px;
       br {
         display: block;
       }
     }
-
     .secondary {
       font-size: 22px;
     }
-
     .cta-wrap {
-      display: flex;
+      @include flexbox;
       align-items: center;
       justify-content: center;
       padding: 40px 0;
@@ -153,19 +162,28 @@
         }
       }
     }
-
     .try-activities {
-      display: flex;
+      @include flexbox;
       padding: 20px 0;
       span {
         padding-right: 15px;
         font-size: inherit;
       }
       ul {
-        &.page-list {
+        margin: 0;
+        width: inherit;
+        &.page-list, &.slick-dots {
+        }
+        .slick-active {
+          button {
+            width: 34px;
+            height: 34px;
+          }
         }
         li {
-          a {
+          a, button{
+            width: 34px;
+            height: 34px;
             &:hover {
             }
           }
@@ -176,5 +194,4 @@
 }
 
 @media (min-width: 1200px) {
-
 }

@@ -8,7 +8,6 @@ header {
   .corporate-data {
     display: flex;
   }
-
   &.sticky {
     background-color: $color-white;
     color: $color-black;
@@ -41,7 +40,6 @@ header {
       }
     }
   }
-
   .mob-nav {
     display: block;
     width: 34px;
@@ -57,7 +55,6 @@ header {
       }
     }
   }
-
   .logo-wrap {
     display: contents;
     img {
@@ -68,11 +65,9 @@ header {
       }
     }
   }
-
   .lang-sel {
     display: none;
   }
-
   nav {
     display: none;
   }
@@ -99,7 +94,7 @@ header {
 
 @media (min-width: 1024px) {
   header {
-    display: flex;
+    @include flexbox;
     align-items: center;
     padding: 12px 25px;
     .corporate-data {
@@ -121,7 +116,6 @@ header {
         }
       }
     }
-
     &.sticky {
       .logo-wrap {
         img {
@@ -134,7 +128,6 @@ header {
         color: $color-black;
       }
     }
-
     .lang-sel {
       font-size: 12px;
       padding: 0 22px;
@@ -160,23 +153,20 @@ header {
         }
       }
     }
-
     .lang-sel,
     .contact-wrap {
       display: block;
       color: $color-white;
     }
-
     nav {
       width: 65%;
       min-width: 65%;
-      display: flex;
+      @include flexbox;
       align-items: center;
       justify-content: flex-end;
       flex-wrap: nowrap;
-
       ul {
-        display: flex;
+        @include flexbox;
         margin: 0;
         padding: 0;
         list-style: none;

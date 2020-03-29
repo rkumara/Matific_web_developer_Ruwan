@@ -33,6 +33,22 @@ i {
 * {
   box-sizing: border-box; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
 body {
   font-family: Catamaran;
   margin: 0;
@@ -46,6 +62,10 @@ a {
 
 .btn {
   border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,6 +186,10 @@ header {
 
 @media (min-width: 1024px) {
   header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     padding: 12px 25px; }
@@ -209,11 +233,19 @@ header {
     header nav {
       width: 65%;
       min-width: 65%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       flex-wrap: nowrap; }
       header nav ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
         display: flex;
         margin: 0;
         padding: 0;
@@ -244,7 +276,11 @@ header {
   /*height: 80vh;*/
   background-color: #005fab;
   display: flex;
-  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 75px 20px 50px;
@@ -253,7 +289,6 @@ header {
     content: "";
     width: 100%;
     height: 100px;
-    background: #fff;
     z-index: -1;
     bottom: -50px;
     background-color: #005fab;
@@ -304,28 +339,51 @@ header {
       padding-right: 0;
       font-size: 14px; }
     .hero-banner .try-activities ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
       justify-content: space-around;
       list-style: none;
       padding: 2px;
-      margin: 0; }
-      .hero-banner .try-activities ul.page-list {
+      margin: auto;
+      width: max-content;
+      margin-top: 5px; }
+      .hero-banner .try-activities ul.page-list, .hero-banner .try-activities ul.slick-dots {
         border-radius: 20px;
-        border: 1px solid #fff; }
-      .hero-banner .try-activities ul li a {
-        width: 34px;
-        height: 34px;
+        border: 1px solid #fff;
+        order: 1; }
+      .hero-banner .try-activities ul .slick-active button {
+        border-radius: 100%;
+        border: 1px solid #ffd007;
+        background-color: #ffd007;
+        color: #005fab;
+        width: 26px;
+        height: 26px;
+        display: flex; }
+      .hero-banner .try-activities ul li a, .hero-banner .try-activities ul li button {
+        width: 26px;
+        height: 26px;
+        padding: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-weight: 600; }
-        .hero-banner .try-activities ul li a:hover {
+        font-weight: bold;
+        border: 0;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        outline: none; }
+        .hero-banner .try-activities ul li a:hover, .hero-banner .try-activities ul li button:hover {
           border-radius: 100%;
           border: 1px solid #ffd007;
           background-color: #ffd007;
           color: #005fab;
-          width: 34px;
-          height: 34px;
           display: flex; }
 
 @media (min-width: 1024px) {
@@ -342,6 +400,10 @@ header {
     .hero-banner .secondary {
       font-size: 22px; }
     .hero-banner .cta-wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -354,22 +416,55 @@ header {
         .hero-banner .cta-wrap a.free-trial {
           margin-left: 15px; }
     .hero-banner .try-activities {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
       padding: 20px 0; }
       .hero-banner .try-activities span {
         padding-right: 15px;
-        font-size: inherit; } }
+        font-size: inherit; }
+      .hero-banner .try-activities ul {
+        margin: 0;
+        width: inherit; }
+        .hero-banner .try-activities ul .slick-active button {
+          width: 34px;
+          height: 34px; }
+        .hero-banner .try-activities ul li a, .hero-banner .try-activities ul li button {
+          width: 34px;
+          height: 34px; } }
 .activity-slider-wrapper {
   transform: translateY(-55px);
-  padding: 15px 60px; }
-  .activity-slider-wrapper .slick-slider .slick-list {
-    padding: 0; }
-  .activity-slider-wrapper .slick-slide {
-    display: flex;
-    justify-content: space-around; }
+  padding: 15px 10px; }
+  .activity-slider-wrapper .videos-slider .slick-slider {
+    display: flex !important;
+    flex-direction: column; }
+    .activity-slider-wrapper .videos-slider .slick-slider .slick-list {
+      order: 2; }
+      .activity-slider-wrapper .videos-slider .slick-slider .slick-list .slick-track .slick-slide {
+        justify-content: space-around;
+        padding: 0 10px; }
+    .activity-slider-wrapper .videos-slider .slick-slider .slick-dots {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .activity-slider-wrapper .videos-slider .slick-slider .slick-arrow {
+      display: none !important; }
   .activity-slider-wrapper .image-wrap {
     width: 100%; }
+    .activity-slider-wrapper .image-wrap img {
+      width: 100%; }
   .activity-slider-wrapper h3 {
     color: #005fab; }
+
+@media (min-width: 1024px) {
+  .activity-slider-wrapper {
+    transform: translateY(-55px);
+    padding: 15px 60px; }
+    .activity-slider-wrapper .videos-slider .slick-slider .slick-list .slick-track .slick-slide {
+      padding: 0 10px; } }
 
 /*# sourceMappingURL=styles.css.map */
