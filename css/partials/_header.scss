@@ -3,31 +3,93 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   z-index: 999;
+  .corporate-data {
+    display: flex;
+  }
 
   &.sticky {
     background-color: $color-white;
+    color: $color-black;
+    a {
+      color: $color-black;
+    }
+    .white-btn {
+      border-color: $color-orange;
+      color: $color-orange;
+    }
+    .org-btn {
+      color: $color-white;
+    }
+    .logo-wrap {
+      display: contents;
+      img {
+        display: block;
+        margin: 0 auto;
+        height: 36px;
+        &.inverse {
+          display: none;
+        }
+      }
+    }
+    .contact-wrap {
+      .icon-matphone {
+        &:before {
+          color: $color-black;
+        }
+      }
+    }
+  }
+
+  .mob-nav {
+    display: block;
+    width: 34px;
+    height: 34px;
+    padding: 3px 0 0;
+    border-radius:50%;
+    background-color: $color-orange;
+    text-align: center;
+    align-items: center;
+    .icon-matico-menu {
+      &:before {
+        font-size: 10px;
+      }
+    }
   }
 
   .logo-wrap {
+    display: contents;
     img {
       display: none;
-
       &.inverse {
         display: block;
         margin: 0 auto;
-        width: 110px;
       }
     }
+  }
+
+  .lang-sel {
+    display: none;
   }
 
   nav {
     display: none;
   }
-
   .contact-wrap {
     font-size: 0;
+    order:3 ;
+    display: block;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    padding-top: 8px;
+    a {
+      font-size: 0;
+    }
+    .icon-matphone {
+      font-size: 16px;
+    }
   }
 }
 
@@ -35,17 +97,66 @@ header {
 
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   header {
     display: flex;
     align-items: center;
+    padding: 12px 25px;
+    .corporate-data {
+      width: 35%;
+      align-items: center;
+      .mob-nav {
+        display: none;
+      }
+      .logo-wrap {
+        img {
+          height: 40px;
+          display: block;
+          margin: 0;
+          &.on-act {
+            display: none;
+          }
+          &.inverse {
+          }
+        }
+      }
+    }
 
-    .logo-wrap {
+    &.sticky {
+      .logo-wrap {
+        img {
+          &.on-act {
+            display: block;
+          }
+        }
+      }
+      .lang-sel, .contact-wrap {
+        color: $color-black;
+      }
+    }
+
+    .lang-sel {
+      font-size: 12px;
+      padding: 0 22px;
       img {
-        display: block;
-
-        &.inverse {
-          display: none;
+        width: 20px;
+        border: 1px solid $color-white;
+        border-radius: 2px;
+      }
+    }
+    .contact-wrap {
+      font-size: 16px;
+      width: inherit;
+      height: inherit;
+      text-align: inherit;
+      padding-top: inherit;
+      a {
+        font-size: inherit;
+      }
+      .icon-matphone {
+        &:before{
+          font-size: 10px;
+          padding-right: 8px;
         }
       }
     }
@@ -53,24 +164,56 @@ header {
     .lang-sel,
     .contact-wrap {
       display: block;
-    }
-    .contact-wrap {
-      font-size: 14px;
+      color: $color-white;
     }
 
     nav {
-      display: block;
+      width: 65%;
+      min-width: 65%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: nowrap;
 
       ul {
         display: flex;
         margin: 0;
         padding: 0;
         list-style: none;
+        li {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding:0;
+          &:last-child {
+            padding-left: 10px;
+          }
+          &:nth-child(5) {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          a{
+            padding: 13px 10px;
+            line-height: 14px;
+            &.btn {
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+          }
+        }
       }
     }
   }
 }
 
 @media (min-width: 1200px) {
-
+  header {
+    .corporate-data {
+      width: 35%;
+    }
+    nav {
+      width: 65%;
+      min-width: 65%;
+    }
+  }
 }

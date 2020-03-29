@@ -1,4 +1,19 @@
 .activity-slider-wrapper {
   transform: translateY(-55px);
-  padding: 15px;
+  padding: 15px 60px;
+  .slick-slider {
+    .slick-list {
+      padding: 0;
+    }
+  }
+  .slick-slide {
+    display: flex;
+    justify-content: space-around;
+  }
+  .image-wrap {
+    width: 100%;
+  }
+  h3 {
+    color: $color-blue;
+  }
 }

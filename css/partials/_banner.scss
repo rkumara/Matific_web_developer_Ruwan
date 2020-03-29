@@ -1,17 +1,37 @@
 .hero-banner {
+  /*height: 80vh;*/
   background-color: $color-blue;
-  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 60px 15px;
+  padding: 75px 20px 50px;
+  position: relative;
+  &:after {
+    content:  "";
+    width: 100%;
+    height: 100px;
+    background: $color-white;
+    z-index: -1;
+    bottom: -50px;
+    background-color: $color-blue;
+    left: 0;
+    position: absolute;
+    transform: skewY(-1.5deg);
+    transform-origin: top left;
+  }
+  .banner-bg {
+    background: $color-blue;
+    width: 100%;
+    position: relative;
+  }
 
   h1 {
     color: $color-white;
     text-align: center;
     width: 100%;
-    font-size: 30px;
+    font-size: 25px;
+    padding: 0;
 
     br {
       display: none;
@@ -25,14 +45,136 @@
     text-align: center;
   }
 
+  .cta-wrap {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    a {
+      width: auto;
+      padding: 10px;
+      &.why {
+        margin-right:0;
+        margin-bottom: 20px;
+        .icon-matplay2 {
+          padding-right: 7px;
+        }
+      }
+      &.free-trial {
+        margin-left: 0;
+      }
+    }
+  }
+
   .try-activities {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 20px;
+    color: $color-white;
+    text-align: center;
+    span {
+      padding-right: 0;
+      font-size: 14px;
+    }
     ul {
       display: flex;
       justify-content: space-around;
       list-style: none;
-      padding: 0;
+      padding: 2px;
       margin: 0;
-      width: 100%;
+      &.page-list {
+        border-radius: 20px;
+        border: 1px solid $color-white;
+      }
+      li {
+        a {
+          width: 34px;
+          height: 34px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 600;
+          &:hover {
+            border-radius: 100%;
+            border: 1px solid $color-yellow;
+            background-color: $color-yellow;
+            color: $color-blue;
+            width: 34px;
+            height: 34px;
+            display: flex;
+          }
+        }
+      }
     }
   }
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 1024px) {
+  .hero-banner {
+    padding: 100px 60px;
+    &:after {
+      bottom: -80px;
+    }
+    .banner-bg {
+      background: url(../images/Group5.png) left 60% no-repeat, url(../images/Group13.png) right 60% no-repeat;
+    }
+
+    h1 {
+      font-size: 50px;
+      br {
+        display: block;
+      }
+    }
+
+    .secondary {
+      font-size: 22px;
+    }
+
+    .cta-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+      a {
+        padding: 12px 30px;
+        &.why {
+          margin-right: 15px;
+          margin-bottom: 0;
+          .icon-matplay2 {
+          }
+        }
+        &.free-trial {
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .try-activities {
+      display: flex;
+      padding: 20px 0;
+      span {
+        padding-right: 15px;
+        font-size: inherit;
+      }
+      ul {
+        &.page-list {
+        }
+        li {
+          a {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
 }
