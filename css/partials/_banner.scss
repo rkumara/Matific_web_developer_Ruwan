@@ -83,6 +83,7 @@
         border-radius: 20px;
         border: 1px solid $color-white;
         order: 1;
+        /*width: 100%;*/
       }
       .slick-active {
         button {
@@ -174,6 +175,7 @@
         margin: 0;
         width: inherit;
         &.page-list, &.slick-dots {
+          /*width:auto;*/
         }
         .slick-active {
           button {

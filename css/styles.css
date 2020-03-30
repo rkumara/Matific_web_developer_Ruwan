@@ -141,6 +141,8 @@ header {
       color: #fff; }
     header.sticky .logo-wrap {
       display: contents; }
+      header.sticky .logo-wrap a {
+        display: contents; }
       header.sticky .logo-wrap img {
         display: block;
         margin: 0 auto;
@@ -149,6 +151,10 @@ header {
           display: none; }
     header.sticky .contact-wrap .icon-matphone:before {
       color: #000000; }
+    header.sticky nav#mobmenu {
+      background-color: #fff; }
+  header a.icon {
+    z-index: 99; }
   header .mob-nav {
     display: block;
     width: 34px;
@@ -162,6 +168,8 @@ header {
       font-size: 10px; }
   header .logo-wrap {
     display: contents; }
+    header .logo-wrap a {
+      display: contents; }
     header .logo-wrap img {
       display: none; }
       header .logo-wrap img.inverse {
@@ -169,8 +177,18 @@ header {
         margin: 0 auto; }
   header .lang-sel {
     display: none; }
-  header nav {
-    display: none; }
+  header nav#mobmenu {
+    display: none;
+    width: 100%;
+    background-color: #005fab;
+    margin: 0 -12px;
+    position: absolute;
+    top: 0; }
+    header nav#mobmenu ul {
+      list-style: none;
+      padding: 30px 15px 30px 50px; }
+      header nav#mobmenu ul li:last-child {
+        margin-top: 10px; }
   header .contact-wrap {
     font-size: 0;
     order: 3;
@@ -241,6 +259,18 @@ header {
       align-items: center;
       justify-content: flex-end;
       flex-wrap: nowrap; }
+      header nav#mobmenu {
+        display: flex;
+        width: auto;
+        background-color: inherit;
+        margin: 0;
+        position: relative;
+        top: 0; }
+        header nav#mobmenu ul {
+          list-style: none;
+          padding: inherit; }
+          header nav#mobmenu ul li:last-child {
+            margin-top: 0; }
       header nav ul {
         display: -webkit-box;
         display: -webkit-flex;
@@ -353,7 +383,8 @@ header {
       .hero-banner .try-activities ul.page-list, .hero-banner .try-activities ul.slick-dots {
         border-radius: 20px;
         border: 1px solid #fff;
-        order: 1; }
+        order: 1;
+        /*width: 100%;*/ }
       .hero-banner .try-activities ul .slick-active button {
         border-radius: 100%;
         border: 1px solid #ffd007;
@@ -429,6 +460,8 @@ header {
       .hero-banner .try-activities ul {
         margin: 0;
         width: inherit; }
+        .hero-banner .try-activities ul.page-list, .hero-banner .try-activities ul.slick-dots {
+          /*width:auto;*/ }
         .hero-banner .try-activities ul .slick-active button {
           width: 34px;
           height: 34px;
