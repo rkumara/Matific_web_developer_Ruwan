@@ -14,3 +14,7 @@ Instructions:-
 Advance:-<br>
 -Use React/Angular or similar JS framework to swicth galleries<br>
 -Use of Django framework<br>
+
+<br>
+<br>
+WEB LINK : http://ruwankumaradesilva.com/projects/web-dev-test/
