@@ -93,13 +93,14 @@
           width: 26px;
           height: 26px;
           display: flex;
+          padding: 5px;
         }
       }
       li {
         a, button {
           width: 26px;
           height: 26px;
-          padding: 0;
+          padding: 5px;
           @include flexbox;
           justify-content: center;
           align-items: center;
@@ -178,12 +179,14 @@
           button {
             width: 34px;
             height: 34px;
+            padding: 8px;
           }
         }
         li {
           a, button{
             width: 34px;
             height: 34px;
+            padding: 8px;
             &:hover {
             }
           }

@@ -64,7 +64,7 @@ a {
   border-radius: 5px;
   display: -webkit-box;
   display: -webkit-flex;
-  display: -moz-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
@@ -188,7 +188,7 @@ header {
   header {
     display: -webkit-box;
     display: -webkit-flex;
-    display: -moz-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     align-items: center;
@@ -235,7 +235,7 @@ header {
       min-width: 65%;
       display: -webkit-box;
       display: -webkit-flex;
-      display: -moz-flex;
+      display: -moz-box;
       display: -ms-flexbox;
       display: flex;
       align-items: center;
@@ -244,7 +244,7 @@ header {
       header nav ul {
         display: -webkit-box;
         display: -webkit-flex;
-        display: -moz-flex;
+        display: -moz-box;
         display: -ms-flexbox;
         display: flex;
         margin: 0;
@@ -278,7 +278,7 @@ header {
   display: flex;
   display: -webkit-box;
   display: -webkit-flex;
-  display: -moz-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
@@ -341,7 +341,7 @@ header {
     .hero-banner .try-activities ul {
       display: -webkit-box;
       display: -webkit-flex;
-      display: -moz-flex;
+      display: -moz-box;
       display: -ms-flexbox;
       display: flex;
       justify-content: space-around;
@@ -361,14 +361,15 @@ header {
         color: #005fab;
         width: 26px;
         height: 26px;
-        display: flex; }
+        display: flex;
+        padding: 5px; }
       .hero-banner .try-activities ul li a, .hero-banner .try-activities ul li button {
         width: 26px;
         height: 26px;
-        padding: 0;
+        padding: 5px;
         display: -webkit-box;
         display: -webkit-flex;
-        display: -moz-flex;
+        display: -moz-box;
         display: -ms-flexbox;
         display: flex;
         justify-content: center;
@@ -402,7 +403,7 @@ header {
     .hero-banner .cta-wrap {
       display: -webkit-box;
       display: -webkit-flex;
-      display: -moz-flex;
+      display: -moz-box;
       display: -ms-flexbox;
       display: flex;
       align-items: center;
@@ -418,7 +419,7 @@ header {
     .hero-banner .try-activities {
       display: -webkit-box;
       display: -webkit-flex;
-      display: -moz-flex;
+      display: -moz-box;
       display: -ms-flexbox;
       display: flex;
       padding: 20px 0; }
@@ -430,10 +431,12 @@ header {
         width: inherit; }
         .hero-banner .try-activities ul .slick-active button {
           width: 34px;
-          height: 34px; }
+          height: 34px;
+          padding: 8px; }
         .hero-banner .try-activities ul li a, .hero-banner .try-activities ul li button {
           width: 34px;
-          height: 34px; } }
+          height: 34px;
+          padding: 8px; } }
 .activity-slider-wrapper {
   transform: translateY(-55px);
   padding: 15px 10px; }
@@ -448,7 +451,7 @@ header {
     .activity-slider-wrapper .videos-slider .slick-slider .slick-dots {
       display: -webkit-box;
       display: -webkit-flex;
-      display: -moz-flex;
+      display: -moz-box;
       display: -ms-flexbox;
       display: flex; }
     .activity-slider-wrapper .videos-slider .slick-slider .slick-arrow {
