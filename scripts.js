@@ -1,3 +1,4 @@
+//sticky header
 $(window).scroll(function () {
     var windowTop = $(window).scrollTop();
     var stickyTop = $('header').outerHeight();
@@ -9,6 +10,7 @@ $(window).scroll(function () {
     }
 });
 
+//mobile menu
 function myFunction() {
     var x = document.getElementById("mobmenu");
     if (x.style.display === "block") {
@@ -20,10 +22,7 @@ function myFunction() {
 
 
 //popup
-// Get the modal
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
@@ -46,6 +45,7 @@ window.onclick = function (event) {
     }
 }
 
+//data for galler
 $.getJSON('data.json', function (json) {
     $(json).each(function (i, val) {
         $('.slider').append("<div>\n" +
@@ -53,20 +53,24 @@ $.getJSON('data.json', function (json) {
             "                    <div class='image-wrap'>\n" +
             "                        <img src='" + val.image + "' alt='Matific Video'>\n" +
             "                    </div>\n" +
-            "                    <h3>" + val.name + "</h3>\n" +
+            "                    <h3 class='icon-matplay2'>" + val.name + "</h3>\n" +
             "                </a>\n" +
             "            </div>");
     });
 });
 
+//slick gallery
 setTimeout(function(){
     //slick slider
     $('.responsive').slick({
         dots: true,
+
         infinite: false,
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 2,
+        numViews:5,
+        activeView:0,
         responsive: [
             {
                 breakpoint: 1280,

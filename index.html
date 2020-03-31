@@ -71,11 +71,63 @@
 </div>
 <!-- End The Popup Modal -->
 
-
-
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="scripts.js"></script>
 </body>
+
+<!-- React reference and code
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+///
+HTML code
+<div id="container"></div>
+/**
+ * index.js Created by ruwan on 3/31/2020.
+ */
+import React from "react";
+import ReactDOM from "react-dom";
+import Slider from "react-slick";
+
+class MultipleItems extends React.Component {
+    render() {
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        };
+        return (
+            <div className="container">
+            <Slider {...settings}>
+            <div>
+            <img src="" />
+            <span> Episodes</span>
+            </div>
+            <div>
+            <img src="" />
+            <span> Episodes</span>
+            </div>
+            <div>
+            <img src="" />
+            <span> Episodes</span>
+            </div>
+            <div>
+            <img src="" />
+            <span> Episodes</span>
+            </div>
+            </Slider>
+            </div>
+    );
+    }
+}
+
+ReactDOM.render(<MultipleItems />, document.getElementById("container"));
+
+-->
+
 </html>
